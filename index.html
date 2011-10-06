@@ -97,6 +97,37 @@
       $(function () {
         generate_stamp()
         $(window).resize(generate_stamp)
+
+        var initial_word = $('.head'),
+            initial_word_dim = {
+              width: initial_word.width(),
+              bottom: initial_word.height() + initial_word.offset().top
+            },
+            font_size = Number(initial_word.css('font-size').split('px')[0])
+
+        console.log('font size started at ' + font_size)
+        console.dir(initial_word_dim)
+
+        $('.head').blur(function () {
+          var new_word = $(this), counter = 0
+
+          new_word.text(
+            new_word.text().toUpperCase()
+          )
+
+          while (Math.abs(new_word.width() - initial_word_dim.width) > 4) {
+            if (new_word.width() > initial_word_dim.width) {
+              // make it smaller
+              new_word.css('font-size', (--font_size) + 'px')
+            } else {
+              // make it bigger
+              new_word.css('font-size', (++font_size) + 'px')
+            }
+          }
+
+          // align bottom
+          new_word.offset({top: initial_word_dim.bottom - new_word.height()})
+        })
       })
     </script>
   </body>
