@@ -1,0 +1,83 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/typography/text/nowrap";
+@import "compass";
+
+$circle_diameter: 600px;
+$scallop_diameter: $circle_diameter / 8;
+$ring_diameter_offset: 90px;
+$ring_border_thickness: 8px;
+$ring_diameter: $circle_diameter - $ring_diameter_offset;
+$page_background: #fff;
+
+body {
+  font-family: "Futura", "Trebuchet MS", sans;
+  background: $page_background;
+}
+
+.scallop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: $scallop_diameter;
+  height: $scallop_diameter;
+  background: $page_background;
+  z-index: 1000;
+  @include border-radius(($scallop_diameter / 2) + 2px)
+}
+
+.stamp {
+  width: $circle_diameter;
+  height: $circle_diameter;
+  margin: 40px auto;
+  text-align: center;
+  @include border-radius(($circle_diameter / 2) + 20px);
+
+  color: #fff;
+  background: rgb(51,51,51);
+
+  position: relative;
+
+  // hand placed for now
+  .ring {
+    position: absolute;
+    top:  ($ring_diameter_offset - $ring_border_thickness) / 2;
+    left: ($ring_diameter_offset - $ring_border_thickness) / 2;
+    width: $ring_diameter;
+    height: $ring_diameter;
+    border: $ring_border_thickness solid white;
+    @include border-radius(($ring_diameter / 2) + 10px);
+  }
+
+  .logo {
+    position: absolute;
+    top: 170px;
+    left: 110px;
+
+    .head {
+      @include nowrap;
+      font-size: 130px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .mid  {
+      font-size: 50px;
+      position: absolute;
+      top: 130px;
+      left: 160px;
+    }
+    .bottom {
+      @include nowrap;
+      font-size: 69px;
+      position: absolute;
+      top: 130px + 60px;
+      left: 0;
+    }
+  }
+}
+
