@@ -74,6 +74,17 @@ body {
 }
 
 /* line 25, ../sass/screen.scss */
+h3 {
+  font-size: 22px;
+  margin-bottom: 1em;
+}
+
+/* line 30, ../sass/screen.scss */
+p {
+  margin-bottom: 2em;
+}
+
+/* line 34, ../sass/screen.scss */
 .scallop {
   position: absolute;
   top: 0px;
@@ -90,7 +101,7 @@ body {
   border-radius: 39.5px;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 #image-background {
   width: 702px;
   height: 702px;
@@ -98,7 +109,7 @@ body {
   position: relative;
   background: url(../images/wordless-logo.png);
 }
-/* line 43, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 #image-background #head-img {
   white-space: nowrap;
   position: absolute;
@@ -108,7 +119,14 @@ body {
   color: #fff;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
+.centered {
+  margin: 90px auto;
+  text-align: center;
+  width: 600px;
+}
+
+/* line 68, ../sass/screen.scss */
 #plain-html {
   width: 600px;
   height: 600px;
@@ -124,7 +142,7 @@ body {
   background: #333333;
   position: relative;
 }
-/* line 65, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 #plain-html .ring {
   position: absolute;
   top: 41px;
@@ -139,13 +157,13 @@ body {
   -khtml-border-radius: 265px;
   border-radius: 265px;
 }
-/* line 76, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 #plain-html .logo {
   position: absolute;
   top: 170px;
   left: 110px;
 }
-/* line 81, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 #plain-html .logo #head {
   white-space: nowrap;
   font-size: 130px;
@@ -153,14 +171,14 @@ body {
   top: 0;
   left: 0;
 }
-/* line 88, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 #plain-html .logo .mid {
   font-size: 50px;
   position: absolute;
   top: 130px;
   left: 160px;
 }
-/* line 94, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 #plain-html .logo .bottom {
   white-space: nowrap;
   font-size: 69px;
