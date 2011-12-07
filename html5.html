@@ -7,22 +7,30 @@
     <title>MADE IN BALTIMORE</title>
   </head>
   <body>
-    <div id='image-background'>
-      <div id='head-img' contenteditable='true'>MADE</div>
+    <div class='stamp' id='plain-html'>
+      <div class='ring'></div>
+      <div class='logo'>
+        <div id='head' contenteditable='true'>MADE</div>
+        <div class='mid'>IN</div>
+        <div class='bottom'>BALTIMORE</div>
+      </div>
     </div>
 
     <script src='javascripts/generator.js'></script>
     <script src='javascripts/words.js'></script>
     <script>
       $(function () {
-        var initial_word_img = $('#head-img'),
-            initial_word_img_dim = {
-              width: initial_word_img.width(),
-              bottom: initial_word_img.height() + initial_word_img.offset().top,
-              font_size: Number(initial_word_img.css('font-size').split('px')[0])
+        generate_stamp()
+        $(window).resize(generate_stamp)
+
+        var initial_word = $('#head'),
+            initial_word_dim = {
+              width: initial_word.width(),
+              bottom: initial_word.height() + initial_word.offset().top,
+              font_size: Number(initial_word.css('font-size').split('px')[0])
             }
 
-        $('#head-img').blur(function () {
+        $('#head').blur(function () {
           // upcase
           var new_word = $(this),
               dimensions = new_word.attr('id') == 'head' ? initial_word_dim : initial_word_img_dim
@@ -33,7 +41,7 @@
           place_logo_words(this, dimensions)
         })
 
-        $('#head-img').keyup(function () {
+        $('#head').keyup(function () {
           // resize (active)
           var dimensions = $(this).attr('id') == 'head' ? initial_word_dim : initial_word_img_dim
 

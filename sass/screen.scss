@@ -14,6 +14,9 @@ $ring_border_thickness: 8px;
 $ring_diameter: $circle_diameter - $ring_diameter_offset;
 $page_background: #fff;
 
+// image background
+$image_diameter: 702px;
+
 body {
   font-family: "Futura", "Trebuchet MS", sans;
   background: $page_background;
@@ -30,7 +33,24 @@ body {
   @include border-radius(($scallop_diameter / 2) + 2px)
 }
 
-.stamp {
+#image-background {
+  width: $image_diameter;
+  height: $image_diameter;
+  margin: 80px auto;
+  position: relative;
+  background: url(../images/wordless-logo.png);
+
+  #head-img {
+    @include nowrap;
+    position: absolute;
+    top: 234px;
+    left: 151px;
+    font-size: 134px;
+    color: #fff;
+  }
+}
+
+#plain-html {
   width: $circle_diameter;
   height: $circle_diameter;
   margin: 40px auto;
@@ -42,7 +62,6 @@ body {
 
   position: relative;
 
-  // hand placed for now
   .ring {
     position: absolute;
     top:  ($ring_diameter_offset - $ring_border_thickness) / 2;
@@ -53,12 +72,13 @@ body {
     @include border-radius(($ring_diameter / 2) + 10px);
   }
 
+  // hand placed for now
   .logo {
     position: absolute;
     top: 170px;
     left: 110px;
 
-    .head {
+    #head {
       @include nowrap;
       font-size: 130px;
       position: absolute;

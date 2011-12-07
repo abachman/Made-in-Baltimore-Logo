@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.12.alpha.0/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,56 +24,56 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.12.alpha.0/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.12.alpha.0/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.12.alpha.0/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.12.alpha.0/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.12.alpha.0/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.12.alpha.0/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.12.alpha.0/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 114, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 114, ../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.12.alpha.0/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 17, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 body {
   font-family: "Futura", "Trebuchet MS", sans;
   background: white;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 .scallop {
   position: absolute;
   top: 0px;
@@ -90,8 +90,26 @@ body {
   border-radius: 39.5px;
 }
 
-/* line 33, ../sass/screen.scss */
-.stamp {
+/* line 36, ../sass/screen.scss */
+#image-background {
+  width: 702px;
+  height: 702px;
+  margin: 80px auto;
+  position: relative;
+  background: url(../images/wordless-logo.png);
+}
+/* line 43, ../sass/screen.scss */
+#image-background #head-img {
+  white-space: nowrap;
+  position: absolute;
+  top: 234px;
+  left: 151px;
+  font-size: 134px;
+  color: #fff;
+}
+
+/* line 53, ../sass/screen.scss */
+#plain-html {
   width: 600px;
   height: 600px;
   margin: 40px auto;
@@ -106,8 +124,8 @@ body {
   background: #333333;
   position: relative;
 }
-/* line 46, ../sass/screen.scss */
-.stamp .ring {
+/* line 65, ../sass/screen.scss */
+#plain-html .ring {
   position: absolute;
   top: 41px;
   left: 41px;
@@ -121,29 +139,29 @@ body {
   -khtml-border-radius: 265px;
   border-radius: 265px;
 }
-/* line 56, ../sass/screen.scss */
-.stamp .logo {
+/* line 76, ../sass/screen.scss */
+#plain-html .logo {
   position: absolute;
   top: 170px;
   left: 110px;
 }
-/* line 61, ../sass/screen.scss */
-.stamp .logo .head {
+/* line 81, ../sass/screen.scss */
+#plain-html .logo #head {
   white-space: nowrap;
   font-size: 130px;
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 68, ../sass/screen.scss */
-.stamp .logo .mid {
+/* line 88, ../sass/screen.scss */
+#plain-html .logo .mid {
   font-size: 50px;
   position: absolute;
   top: 130px;
   left: 160px;
 }
-/* line 74, ../sass/screen.scss */
-.stamp .logo .bottom {
+/* line 94, ../sass/screen.scss */
+#plain-html .logo .bottom {
   white-space: nowrap;
   font-size: 69px;
   position: absolute;
